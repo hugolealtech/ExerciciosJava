@@ -1,31 +1,36 @@
-package exercicios;
+package expressoesComparativas;
 
-
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Tabuada {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
+	public static void main(String[]args) {
 		
-		
+		Locale.setDefault(Locale.ENGLISH);
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Digite o numero  da tabuada que deseja:");
+		
+		//Digite um numero n para que a partir dele seja formada a tabuada daquele numero de 1 à 10
+		
 		
 		int n = sc.nextInt();
 		int controle = 10;
 		
-		System.out.println("------------Tabuada de " + n + " -------------");
 		
-		for (int i = 0; i <= controle; i++) {
+		for (int i = 0; i < controle; i++) {
 			
-			System.out.println(n + "  X  " + i + "  = " + (i * n));
+			if (i >= 0 && i <= controle ) {
+				System.out.println( i + "  X  " + n + " = " + (i * n));
+				
+			}
 		}
-		System.out.println("--------------------------");
-		System.out.println ("Fim do Programa!");
+			
+			
+			
 		
-		sc.close();
+		
+		
 	}
 
 }
